@@ -1,7 +1,9 @@
 import React from "react";
 
+
 import CategoryList from "../../components/categoryList/categoryList.component"
 import './homepage.styles.css'
+
 
 class HomePage extends React.Component {
     render()
