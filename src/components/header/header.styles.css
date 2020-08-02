@@ -1,0 +1,22 @@
+.header{
+    height:100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    background-color: #f1ecec;
+}
+.header img{
+    height: 100%;
+    width: 100px;
+}
+.header .options{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.options .option{
+    padding: 10px 15px;
+}

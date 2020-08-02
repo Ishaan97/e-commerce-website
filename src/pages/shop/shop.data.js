@@ -6,56 +6,56 @@ const SHOP_DATA = [
       items: [
         {
           id: 1,
-          name: 'Brown Brim',
-          imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
-          price: 25
+          name: 'Bananas',
+          imageUrl: 'https://cdn1.sph.harvard.edu/wp-content/uploads/sites/30/2018/08/bananas-1354785_1920-1200x800.jpg',
+          price: 50
         },
         {
           id: 2,
-          name: 'Blue Beanie',
-          imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
+          name: 'Apples',
+          imageUrl: "https://economictimes.indiatimes.com/thumb/msid-70362418,width-1200,height-900,resizemode-4,imgsize-971552/apples_getty-images.jpg",
           price: 18
         },
         {
           id: 3,
-          name: 'Brown Cowboy',
-          imageUrl: 'https://i.ibb.co/QdJwgmp/brown-cowboy.png',
+          name: 'Turtle Bread',
+          imageUrl: 'https://images-gmi-pmc.edge-generalmills.com/da2abda1-fae1-4782-b65f-93868ca5bd40.jpg',
           price: 35
         },
         {
           id: 4,
-          name: 'Grey Brim',
-          imageUrl: 'https://i.ibb.co/RjBLWxB/grey-brim.png',
+          name: 'Subway',
+          imageUrl: 'https://sugargeekshow.com/wp-content/uploads/2020/03/fast-bread-recipe-fb.jpg',
           price: 25
         },
         {
           id: 5,
-          name: 'Green Beanie',
-          imageUrl: 'https://i.ibb.co/YTjW3vF/green-beanie.png',
+          name: 'Sweet Corn',
+          imageUrl: 'https://i2.wp.com/vegecravings.com/wp-content/uploads/2018/10/Masala-Corn-Recipe-Step-By-Step-Instructions-8.jpg',
           price: 18
         },
         {
           id: 6,
-          name: 'Palm Tree Cap',
-          imageUrl: 'https://i.ibb.co/rKBDvJX/palm-tree-cap.png',
+          name: 'Baby Corn',
+          imageUrl: 'https://rukminim1.flixcart.com/image/352/352/jl16s280/plant-seed/c/z/f/200-baby-corn-seed-pack-of-50-seed-x-4-per-pkts-4-packet-of-baby-original-imaf887pdun9nay4.jpeg',
           price: 14
         },
         {
           id: 7,
-          name: 'Red Beanie',
-          imageUrl: 'https://i.ibb.co/bLB646Z/red-beanie.png',
+          name: 'Mushrooms',
+          imageUrl: 'https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/278/278858/mushrooms-in-a-bowel-on-a-dark-table.jpg',
           price: 18
         },
         {
           id: 8,
-          name: 'Wolf Cap',
-          imageUrl: 'https://i.ibb.co/1f2nWMM/wolf-cap.png',
+          name: 'Onions',
+          imageUrl: 'https://st1.thehealthsite.com/wp-content/uploads/2014/09/onions-e1421989411676.jpg',
           price: 14
         },
         {
           id: 9,
-          name: 'Blue Snapback',
-          imageUrl: 'https://i.ibb.co/X2VJP2W/blue-snapback.png',
+          name: 'Potatoes',
+          imageUrl: 'https://mynorthwest.com/wp-content/uploads/2020/04/potatoes-620-unsplash.jpg',
           price: 16
         }
       ]
@@ -67,26 +67,26 @@ const SHOP_DATA = [
       items: [
         {
           id: 1,
-          name: 'Adidas NMD',
-          imageUrl: 'https://i.ibb.co/0s3pdnc/adidas-nmd.png',
+          name: 'Nokia',
+          imageUrl: 'https://drop.ndtv.com/TECH/product_database/images/530201344201PM_635_nokia_asha_501.png',
           price: 220
         },
         {
           id: 2,
-          name: 'Adidas Yeezy',
-          imageUrl: 'https://i.ibb.co/dJbG1cT/yeezy.png',
+          name: 'Samsung',
+          imageUrl: 'https://www.mobileshopsilchar.com/wp-content/uploads/2018/09/Guru-music-2-black.png',
           price: 280
         },
         {
           id: 3,
-          name: 'Black Converse',
-          imageUrl: 'https://i.ibb.co/bPmVXyP/black-converse.png',
+          name: 'Motorola',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/16/Motorola_RAZR_V3i_01.JPG',
           price: 110
         },
         {
           id: 4,
-          name: 'Nike White AirForce',
-          imageUrl: 'https://i.ibb.co/1RcFPk0/white-nike-high-tops.png',
+          name: 'BlackBerry',
+          imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81Ux-qSWfEL._AC_SL1500_.jpg',
           price: 160
         },
         {
@@ -97,20 +97,20 @@ const SHOP_DATA = [
         },
         {
           id: 6,
-          name: 'Nike Brown High Tops',
-          imageUrl: 'https://i.ibb.co/fMTV342/nike-brown.png',
+          name: 'Apple',
+          imageUrl: 'https://i.ytimg.com/vi/L21NWdDY5KE/maxresdefault.jpg',
           price: 160
         },
         {
           id: 7,
-          name: 'Air Jordan Limited',
-          imageUrl: 'https://i.ibb.co/w4k6Ws9/nike-funky.png',
+          name: 'Sony Ericsson',
+          imageUrl: 'https://www.webdesignerdepot.com/cdn-origin/uploads/cellphone_design/dkmb86g_463g783d4cf_b.jpg',
           price: 190
         },
         {
           id: 8,
-          name: 'Timberlands',
-          imageUrl: 'https://i.ibb.co/Mhh6wBg/timberlands.png',
+          name: 'LG',
+          imageUrl: 'https://icdn9.digitaltrends.com/image/lg-b470-3g-flip-phone-500x500.jpg',
           price: 200
         }
       ]
@@ -122,8 +122,8 @@ const SHOP_DATA = [
       items: [
         {
           id: 1,
-          name: 'Black Jean Shearling',
-          imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
+          name: 'Striped Sweater',
+          imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
           price: 125
         },
         {
@@ -140,14 +140,14 @@ const SHOP_DATA = [
         },
         {
           id: 4,
-          name: 'Brown Shearling',
-          imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
+          name: 'Camo Down Vest',
+          imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
           price: 165
         },
         {
           id: 5,
-          name: 'Tan Trench',
-          imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
+          name: 'Black & White Longsleeve',
+          imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
           price: 185
         }
       ]
@@ -159,44 +159,44 @@ const SHOP_DATA = [
       items: [
         {
           id: 1,
-          name: 'Blue Tanktop',
-          imageUrl: 'https://i.ibb.co/7CQVJNm/blue-tank.png',
+          name: 'Children Books',
+          imageUrl: 'https://cdn.images.express.co.uk/img/dynamic/39/590x/Best-children-s-books-for-kids-1271831.jpg',
           price: 25
         },
         {
           id: 2,
-          name: 'Floral Blouse',
-          imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
+          name: 'Fiction Books',
+          imageUrl: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gh-060520-summer-fiction-books-1591381368.png',
           price: 20
         },
         {
           id: 3,
-          name: 'Floral Dress',
-          imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
+          name: 'Non-Fiction Books',
+          imageUrl: 'https://assets.readitforward.com/wp-content/uploads/2018/10/RIF-Holiday-NonFiction-830x625.jpg',
           price: 80
         },
         {
           id: 4,
-          name: 'Red Dots Dress',
-          imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
+          name: 'Classics',
+          imageUrl: 'https://cdn.accentuate.io/51528957999/4528701440047/Classics-Final.jpg',
           price: 80
         },
         {
           id: 5,
-          name: 'Striped Sweater',
-          imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
+          name: 'Magazines',
+          imageUrl: 'https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2014/9/4/1409844261423/IPC-magazines-014.jpg',
           price: 45
         },
         {
           id: 6,
-          name: 'Yellow Track Suit',
-          imageUrl: 'https://i.ibb.co/v1cvwNf/yellow-track-suit.png',
+          name: 'Comics',
+          imageUrl: 'https://img.jakpost.net/c/2019/04/23/2019_04_23_70602_1555992546._large.jpg',
           price: 135
         },
         {
           id: 7,
-          name: 'White Blouse',
-          imageUrl: 'https://i.ibb.co/qBcrsJg/white-vest.png',
+          name: 'Encyclopedia',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f8/Encyclopaedia_Britannica_15_with_2002.jpg',
           price: 20
         }
       ]
@@ -208,38 +208,38 @@ const SHOP_DATA = [
       items: [
         {
           id: 1,
-          name: 'Camo Down Vest',
-          imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
+          name: 'Study Table',
+          imageUrl: 'https://www.hometown.in/media/product/31/9353/34934/1.jpg',
           price: 325
         },
         {
           id: 2,
-          name: 'Floral T-shirt',
-          imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
+          name: 'King Sized Bed',
+          imageUrl: 'https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwe945943c/images/1180000/1180224.jpg',
           price: 20
         },
         {
           id: 3,
-          name: 'Black & White Longsleeve',
-          imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
+          name: 'Sofa Set',
+          imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/813ZLCapA5L._SX425_.jpg',
           price: 25
         },
         {
           id: 4,
-          name: 'Pink T-shirt',
-          imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
+          name: 'Dining Table',
+          imageUrl: 'https://www.ulcdn.net/images/products/13843/product/Arabia_Capra_Bench_Teak_00_IMG_0274.jpg',
           price: 25
         },
         {
           id: 5,
-          name: 'Jean Long Sleeve',
-          imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+          name: 'Side Table',
+          imageUrl: 'https://cb2.scene7.com/is/image/CB2/SpinRotatingSideTableSHS18_16x9',
           price: 40
         },
         {
           id: 6,
-          name: 'Burgundy T-shirt',
-          imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+          name: 'Chairs',
+          imageUrl: 'https://www.mrphome.com/media/wysiwyg/mrp_home/2020/wk-2/shop-occasional-chairs.jpg',
           price: 25
         }
       ]
