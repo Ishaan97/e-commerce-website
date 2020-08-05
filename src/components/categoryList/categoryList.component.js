@@ -24,7 +24,7 @@ class CategoryList extends React.Component {
                 },
                 {
                     title:"Clothes",
-                    imageUrl : "https://ensightskills.org/wp-content/uploads/2017/12/fashionable_women_icons_colored_cartoon_design_6830012.jpg",
+                    imageUrl : "https://image.freepik.com/free-vector/summer-clothes-set_74855-446.jpg",
                     id :3,
                     linkUrl: "groceries"
                 },
