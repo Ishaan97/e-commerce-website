@@ -9,7 +9,7 @@ import logo from '../../assets/logos/iSkull-logo.png';
 class Header extends React.Component{
     render()
     {
-        const currentUser = this.props;
+        const {currentUser} = this.props;
         return (
             <div className="header">
                     <Link to="/" className="logo">
@@ -20,11 +20,16 @@ class Header extends React.Component{
                     <Link className="option" to="/shop">SHOP</Link>
                     <Link className="option" to="/shop">CONTACT</Link>
                     {
-                        currentUser ? <div className="option" onClick={()=> auth.signOut()}>SIGN OUT</div> 
+                        currentUser ? (
+                        <div className="option" onClick={()=> auth.signOut()}>
+                            SIGN OUT
+                        </div>
+                        )
                         : 
-                        <Link className="option" to="/signin">SIGN IN</Link>
-
-                    }
+                        (<Link className="option" to="/signin">
+                            SIGN IN
+                        </Link>
+                    )}
                 </div>
             </div>
         );
