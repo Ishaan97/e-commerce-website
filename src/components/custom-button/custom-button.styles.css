@@ -32,3 +32,12 @@
     border: none;
     color: white;
 }
+.custom-button.inverted{
+    background-color: #357ae8 ;
+    color: white;
+    border: none;
+}
+.custom-button.inverted:hover{
+    background-color: black;
+    color: white;
+}
