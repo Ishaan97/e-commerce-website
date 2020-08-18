@@ -5,6 +5,8 @@ import {connect} from "react-redux"
 
 import {auth} from "../../firebase/firebase.utils"
 
+import CartIcon from "../cart-icon/cart-icon.component"
+
 import './header.styles.css';
 import logo from '../../assets/logos/iSkull-logo.png';
 
@@ -32,7 +34,9 @@ class Header extends React.Component{
                             SIGN IN
                         </Link>
                     )}
+                    <CartIcon />
                 </div>
+                
             </div>
         );
     }
