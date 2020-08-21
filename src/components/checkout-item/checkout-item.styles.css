@@ -6,12 +6,11 @@
     padding: 15px 0;
     font-size: 18px;
     align-items: center;
-    margin: 0px 10px;
+    
 }
 .checkout-item .image-container{
     width: 23%;
-    
-
+    margin-right: 10px;
 }
 .image{
     width: 100%;
@@ -22,9 +21,17 @@
     margin-bottom: 0;
 }
 .checkout-item .quantity{
-    padding-left: 20px;
+    display: flex;
+}
+.checkout-item .quantity .arrow{
+    cursor: pointer;
+    font-weight: bolder;
+}
+.checkout-item .quantity .value{
+    margin: 0 10px;
 }
 .checkout-item .remove-button{
     padding-left: 12px;
     cursor: pointer;
+    font-weight: bolder;
 }
