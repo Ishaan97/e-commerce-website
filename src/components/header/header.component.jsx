@@ -1,15 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {connect} from "react-redux"
+import {connect} from "react-redux";
 import {createStructuredSelector} from "reselect";
 
-import {auth} from "../../firebase/firebase.utils"
+import {auth} from "../../firebase/firebase.utils";
 
-import CartIcon from "../cart-icon/cart-icon.component"
-import CartDropdown from "../cart-dropdown/cart-dropdown.component"
+import CartIcon from "../cart-icon/cart-icon.component";
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
+import UserProfileIcon from "../user-icon/user-icon.component";
+import UserDropdown from "../user-dropdown/user-dropdown.component";
 
 import {selectCartHidden} from "../../redux/cart/cart.selectors";
-import {selectCurrentUser} from "../../redux/user/user.selector";
+import {selectCurrentUser, selectUserDropdownHidden} from "../../redux/user/user.selector";
 
 import './header.styles.css';
 import logo from '../../assets/logos/iSkull-logo.png';
@@ -17,7 +19,7 @@ import logo from '../../assets/logos/iSkull-logo.png';
 class Header extends React.Component{
     render()
     {
-        const {currentUser, hidden} = this.props;
+        const {currentUser, cartHidden, userDropdownHidden} = this.props;
         return (
             <div className="header">
                     <Link to="/" className="logo">
@@ -25,6 +27,7 @@ class Header extends React.Component{
                     </Link>
                 
                 <div className="options">
+                    
                     <Link className="option" to="/shop">SHOP</Link>
                     <Link className="option" to="/shop">CONTACT</Link>
                     {
@@ -38,9 +41,14 @@ class Header extends React.Component{
                             SIGN IN
                         </Link>
                     )}
+                    <UserProfileIcon />
                     <CartIcon />
+                    
                 </div>
-                {hidden? null : <CartDropdown />}
+                {cartHidden? null : <CartDropdown />}
+                {console.log("1",userDropdownHidden)}
+                {userDropdownHidden? null: <UserDropdown /> }
+                
                 
             </div>
         );
@@ -49,6 +57,7 @@ class Header extends React.Component{
 
 const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser,
-    hidden: selectCartHidden
+    cartHidden: selectCartHidden,
+    userDropdownHidden: selectUserDropdownHidden
 })
 export default connect(mapStateToProps)(Header);
