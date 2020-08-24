@@ -16,6 +16,11 @@ const userReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 hidden : !state.hidden
             };
+        case UserActionTypes.USER_DROPDOWN_CLICKED_OUTSIDE : 
+        return {
+            ...state,
+            hidden : true
+        }
         default : 
             return state;
     }
