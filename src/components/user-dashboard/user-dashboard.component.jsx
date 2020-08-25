@@ -12,7 +12,6 @@ class UserDashboard extends React.Component{
                 <div className="options">
                     <span className="option" 
                     onClick = {() =>{
-                        console.log("user")
                         showUserInformation()
                     }}
                     >
@@ -20,13 +19,11 @@ class UserDashboard extends React.Component{
                     </span>
                     <span className="option" 
                     onClick = {() =>{
-                        console.log("pwd")
                         showResetPassword()
                     }}
                     >Reset Password</span>
                     <span className="option" 
                     onClick = {() =>{
-                        console.log("order")
                         showOrderHistory()
                     }}
                     >Order History</span>
