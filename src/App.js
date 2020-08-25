@@ -10,6 +10,7 @@ import SignIn from "./pages/sign-in/sign-in.component";
 import Register from "./pages/register/register.component";
 import Checkout from "./pages/checkout/checkout.component";
 import Footer from "./components/footer/footer.component";
+import UserProfile from "./pages/user-profile/user-profile.component";
 
 import {setCurrentUser} from "./redux/user/user.actions"
 import {selectCurrentUser} from "./redux/user/user.selector";
@@ -54,8 +55,9 @@ class App extends React.Component {
    
   render(){
     return (
-      <div className="body">
+      <React.Fragment>
         <Header/>
+        <div className="wrapper-content">
         <Switch>
           <Route exact path='/' component={HomePage}/>
           <Route path='/shop' component={ShopPage}/>
@@ -78,9 +80,13 @@ class App extends React.Component {
                 <Register/>
               )}
           />
+          <Route path="/user-profile" component={UserProfile} />
         </Switch>
+
+        </div>
+        
         <Footer/>
-      </div>
+      </React.Fragment>
     );
   }
 }

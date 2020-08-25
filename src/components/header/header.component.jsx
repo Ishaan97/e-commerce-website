@@ -24,6 +24,7 @@ class Header extends React.Component{
             <div className="header">
                     <Link to="/" className="logo">
                         <img src = {logo} alt="logo"/>
+                        <span className="logo-text">Mart</span>
                     </Link>
                 
                 <div className="options">

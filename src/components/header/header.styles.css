@@ -6,9 +6,17 @@
     margin-bottom: 15px;
     background-color: #f0f0f0;
 }
-.header img{
+.header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .logo img{
     height: 100%;
     width: 100px;
+}
+.header .logo .logo-text{
+    font-size: 1.5em;
 }
 .header .options{
     width: 50%;
