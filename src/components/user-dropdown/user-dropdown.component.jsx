@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import {withRouter, Link} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 
-import {hideUserDropdown} from "../../redux/user/user.actions";
+import {hideUserDropdown, showUserInformation, showOrderHistory} from "../../redux/user/user.actions";
+
+
 import "./user-dropdown.styles.css";
 
 class UserDropdown extends React.Component{
@@ -23,14 +25,27 @@ class UserDropdown extends React.Component{
     }
     render()
     {
+        const {showUserInformation, showOrderHistory, history} = this.props;
         return(
             <div className="user-dropdown">
                 <div className="user-options">                    
-                    <span className="option">
-                        <Link to="/user-profile">Profile</Link>
+                    <span 
+                    className="option"
+                    onClick = {() =>{
+                        history.push("/user-profile")
+                        showUserInformation()
+                    }}
+                    >
+                        Your Profile
                     </span>
-                    <span className="option">
-                        <Link to="/user-profile">Order History</Link>
+                    <span 
+                    className="option"
+                    onClick = {() =>{
+                        history.push("/user-profile")
+                        showOrderHistory()
+                    }}
+                    >
+                        Order History
                     </span>
                 </div>
             </div>
@@ -40,6 +55,8 @@ class UserDropdown extends React.Component{
 }
 
 const mapDispatchToProps = dispatch => ({
-    hideUserDropdown : () => dispatch(hideUserDropdown())
+    hideUserDropdown : () => dispatch(hideUserDropdown()),
+    showUserInformation : () => dispatch(showUserInformation()),
+    showOrderHistory : () => dispatch(showOrderHistory())
 })
 export default withRouter(connect(null, mapDispatchToProps)(UserDropdown));

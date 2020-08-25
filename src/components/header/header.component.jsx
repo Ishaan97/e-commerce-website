@@ -47,7 +47,6 @@ class Header extends React.Component{
                     
                 </div>
                 {cartHidden? null : <CartDropdown />}
-                {console.log("1",userDropdownHidden)}
                 {userDropdownHidden? null: <UserDropdown /> }
                 
                 

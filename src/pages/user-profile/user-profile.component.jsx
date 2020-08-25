@@ -4,6 +4,8 @@ import UserImage from "../../components/user-image/user-image.component";
 import UserDashboard from "../../components/user-dashboard/user-dashboard.component";
 import UserProfileContent from "../../components/user-profile-content/user-profile-content.component";
 
+import {} from "../../redux/user/user.selector";
+
 import "./user-profile.styles.css";
 
 class UserProfile extends React.Component {
@@ -21,8 +23,7 @@ class UserProfile extends React.Component {
                 </div>
                 <div className="user-content-container">
                     <div className="user-content">
-                        <UserProfileContent />
-
+                        <UserProfileContent/>
                     </div>
                         
                     
