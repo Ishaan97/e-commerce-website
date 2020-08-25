@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
+import {withRouter, Link} from "react-router-dom";
 import {connect} from "react-redux";
 
-import {userDropdownClickedOutside} from "../../redux/user/user.actions";
+import {hideUserDropdown} from "../../redux/user/user.actions";
 import "./user-dropdown.styles.css";
 
 class UserDropdown extends React.Component{
@@ -16,16 +18,20 @@ class UserDropdown extends React.Component{
     handleClick = event => {
         
         if (!ReactDOM.findDOMNode(this).contains(event.target)){
-            this.props.userDropdownClickedOutside();
+            this.props.hideUserDropdown();
         }
     }
     render()
     {
         return(
             <div className="user-dropdown">
-                <div className="user-options">
-                    <span className="option">Profile</span>
-                    <span className="option">Order History</span>
+                <div className="user-options">                    
+                    <span className="option">
+                        <Link to="/user-profile">Profile</Link>
+                    </span>
+                    <span className="option">
+                        <Link to="/user-profile">Order History</Link>
+                    </span>
                 </div>
             </div>
         );
@@ -34,6 +40,6 @@ class UserDropdown extends React.Component{
 }
 
 const mapDispatchToProps = dispatch => ({
-    userDropdownClickedOutside : () => dispatch(userDropdownClickedOutside())
+    hideUserDropdown : () => dispatch(hideUserDropdown())
 })
-export default connect(null, mapDispatchToProps)(UserDropdown);
+export default withRouter(connect(null, mapDispatchToProps)(UserDropdown));

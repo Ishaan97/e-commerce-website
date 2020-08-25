@@ -7,7 +7,7 @@ import {createStructuredSelector} from "reselect";
 import CustomButton from "../custom-button/custom-button.component";
 import CartItem from "../cart-item/cart-item.component";
 import {selectCartItems} from "../../redux/cart/cart.selectors";
-import {toggleCartHidden, cartClickedOutside} from "../../redux/cart/cart.actions";
+import {toggleCartHidden, hideCart} from "../../redux/cart/cart.actions";
 
 import "./cart-dropdown.styles.css";
 
@@ -21,7 +21,7 @@ class CartDropdown extends React.Component {
     handleClick = event => {
         
         if (!ReactDOM.findDOMNode(this).contains(event.target)){
-            this.props.cartClickedOutside()
+            this.props.hideCart()
         }
     }
     
@@ -56,6 +56,6 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = dispatch =>({
     toggleCartHidden : () => dispatch(toggleCartHidden()),
-    cartClickedOutside : () => dispatch(cartClickedOutside())
+    hideCart : () => dispatch(hideCart())
 })
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartDropdown));

@@ -4,7 +4,7 @@ export const toggleCartHidden = () => ({
     type: CartActionTypes.TOGGLE_CART_HIDDEN
 });
 
-export const cartClickedOutside = () =>({
+export const hideCart = () =>({
     type: CartActionTypes.CART_CLICK_OUTSIDE
 })
 

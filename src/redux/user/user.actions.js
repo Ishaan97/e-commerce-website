@@ -9,6 +9,6 @@ export const toggleUserDropdownHidden = () => ({
     type: UserActionTypes.TOGGLE_USER_DROPDOWN_HIDDEN
 })
 
-export const userDropdownClickedOutside = () => ({
+export const hideUserDropdown = () => ({
     type: UserActionTypes.USER_DROPDOWN_CLICKED_OUTSIDE
 })
