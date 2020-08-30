@@ -2,8 +2,10 @@ import React from "react";
 import {connect} from "react-redux";
 import {createStructuredSelector} from "reselect";
 
+import UserInformation from "../user-information/user-information.component";
+
 import {hideUserDropdown} from "../../redux/user/user.actions";
-import {selectShowUserInformation, selectShowResetPassword, selectShowOrderHistory} from "../../redux/user/user.selector";
+import {selectCurrentUser ,selectShowUserInformation, selectShowResetPassword, selectShowOrderHistory} from "../../redux/user/user.selector";
 
 import "./user-profile-content.styles.css";
 
@@ -13,29 +15,28 @@ class UserProfileContent extends React.Component{
         this.props.hideUserDropdown()
     }
 
-    renderUserInformation(){
+    renderUserInformation(currentUser){
         return(
-            <div>User Info</div>
+           <UserInformation/>
         );
     }
     renderResetPassword(){
         return(
-            <div>Reset Password</div>
+            "Reset Password"
         );
     }
     renderOrderHistory(){
         return(
-            <div>Order History</div>
+            "Order History"
         );
     }
     render(){
-        const {showUserInformation, showResetPassword, showOrderHistory} = this.props;
-        console.log("this",showUserInformation)
+        const {currentUser, showUserInformation, showResetPassword, showOrderHistory} = this.props;
         return(
             <div className="user-profile-content-container">
                 {
-                    
-                    showUserInformation ? this.renderUserInformation()
+                    !currentUser ? "No User. Sign In "
+                    : showUserInformation ? this.renderUserInformation()
                     : showResetPassword ? this.renderResetPassword()
                     : showOrderHistory ? this.renderOrderHistory() 
                     : "Nope"
@@ -50,6 +51,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser,
     showUserInformation : selectShowUserInformation,
     showResetPassword : selectShowResetPassword,
     showOrderHistory : selectShowOrderHistory

@@ -8,7 +8,7 @@ import './form-input.styles.css'
 class FormInput extends React.Component {
     render()
     {
-        const {handleChange, label, ...otherProps} = this.props;
+        const {handleChange, label,isGreyBackground, isBlueBackground, ...otherProps} = this.props;
         return (
            <div className="group">
                <input 

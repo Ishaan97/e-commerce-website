@@ -49,6 +49,7 @@ class SignIn extends React.Component {
                     name="email" 
                     type="email" 
                     label = "Email"
+                    isGreyBackground
                     value={this.state.email} 
                     onChange={this.handleChange}
                     required/>

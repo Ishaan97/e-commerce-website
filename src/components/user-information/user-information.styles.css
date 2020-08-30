@@ -1,0 +1,35 @@
+.user-information
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.user-information .heading{
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: underline;
+    
+}
+
+.user-information .user-details{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.user-information .user-details .name, .email{
+    font-weight: bold;
+    text-align: center;
+}
+
+.user-information .user-details .address-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.user-information .user-details .address-container .address{
+    text-align: center;
+}
+.user-information .user-details .address-container button{
+    margin-top: 20px;
+}
