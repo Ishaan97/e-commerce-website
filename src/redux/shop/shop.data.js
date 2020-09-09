@@ -90,12 +90,6 @@ const SHOP_DATA = {
           price: 160
         },
         {
-          id: 14,
-          name: 'Nike Red High Tops',
-          imageUrl: 'https://i.ibb.co/QcvzydB/nikes-red.png',
-          price: 160
-        },
-        {
           id: 15,
           name: 'Apple',
           imageUrl: 'https://i.ytimg.com/vi/L21NWdDY5KE/maxresdefault.jpg',
