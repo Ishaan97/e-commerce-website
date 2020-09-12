@@ -16,6 +16,7 @@ import {setCurrentUser} from "./redux/user/user.actions"
 import {selectCurrentUser} from "./redux/user/user.selector";
 import {createStructuredSelector} from "reselect";
 
+
 import {auth, createUserProfileDocument} from "./firebase/firebase.utils"
 
 
@@ -44,8 +45,7 @@ class App extends React.Component {
       }else{
       
         setCurrentUser(userAuth)
-      }
-      
+      }      
     })
   }
   componentWillUnmount(){
