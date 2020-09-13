@@ -8,6 +8,7 @@
     font-size: 1.5rem;
     margin-bottom: 25px;
     text-align: start;
+    cursor: pointer;
 }
   
 .collection-preview .preview {
