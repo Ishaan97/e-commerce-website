@@ -1,0 +1,12 @@
+.address-box{
+    border: 3px dashed black;
+    padding: 30px;
+    justify-content: center ;
+    min-width: 100%;
+}
+.address-box .address-body{
+    margin: 0;
+}
+.address-box .address-btn{
+    text-align: center;
+}

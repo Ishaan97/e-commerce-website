@@ -16,7 +16,7 @@ const config = {
 export const createUserProfileDocument = async (userAuth, additionalData) => {
     if (!userAuth) return;
 
-    const userRef = firestore.doc(`users/${userAuth.uid}'`);
+    const userRef = firestore.doc(`users/${userAuth.uid}`);
     const snapShot = await userRef.get();
     
     if (!snapShot.exists)
@@ -39,6 +39,20 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         }
     }
     return userRef;
+}
+
+export const updateUserAddress = async (currentUser, addressData) => {
+    const userRef = firestore.doc(`users/${currentUser.id}`)
+
+    userRef.update({
+        address : addressData
+    })
+    .then(()=>{
+        console.log("Address Updated")
+    })
+    .catch(error =>{
+        console.log('error updating address', error.message);
+    })
 }
 
 export const addCollectionAndDocuments = async  (collectionKey, objectsToAdd) => {

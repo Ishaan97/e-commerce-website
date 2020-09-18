@@ -1,0 +1,15 @@
+.address-item{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+.address-item .address-label{
+    min-width: 33%;
+    font-weight: bold;
+}
+.address-item .address-input{
+    min-width: 67%;
+}
+.address-item .address-input input{
+    width: 100%;
+}

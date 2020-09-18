@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 .user-information .heading{
     font-size: 32px;
@@ -23,13 +24,5 @@
 }
 
 .user-information .user-details .address-container{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-}
-.user-information .user-details .address-container .address{
-    text-align: center;
-}
-.user-information .user-details .address-container button{
-    margin-top: 20px;
+    margin-top: 20px;    
 }

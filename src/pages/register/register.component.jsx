@@ -27,7 +27,6 @@ class Register extends React.Component {
             alert("Passwords dont match");
             return;
         }
-        console.log("handle submit");
         try{
             const {user} = await auth.createUserWithEmailAndPassword(email, password);
             await createUserProfileDocument(user, {displayName});
