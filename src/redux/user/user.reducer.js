@@ -1,7 +1,8 @@
-import {UserActionTypes} from "./user.types"
+import UserActionTypes from "./user.types"
 
 const INITIAL_STATE = {
     currentUser: null,
+    error : null,
     hidden: true,
     showUserInformtion:false,
     showResetPassword:false,
@@ -9,10 +10,23 @@ const INITIAL_STATE = {
 }
 const userReducer = (state = INITIAL_STATE, action) => {
     switch(action.type){
-        case UserActionTypes.SET_CURRENT_USER:
+        case UserActionTypes.SIGN_IN_SUCCESS:
             return {
                 ...state,
-                currentUser: action.payload
+                currentUser: action.payload,
+                error : null
+            };
+        case UserActionTypes.SIGN_OUT_SUCCESS : 
+            return {
+                ...state,
+                currentUser : null,
+                error : null
+            };
+        case UserActionTypes.SIGN_IN_FAILURE : 
+        case UserActionTypes.SIGN_OUT_FAILURE : 
+            return{
+                ...state,
+                error : action.payload
             };
         case UserActionTypes.TOGGLE_USER_DROPDOWN_HIDDEN : 
             return{
