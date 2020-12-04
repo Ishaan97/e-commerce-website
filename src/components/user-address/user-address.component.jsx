@@ -8,6 +8,7 @@ import AddressItem from "../address-item/address-item.component";
 import CustomButton from "../custom-button/custom-button.component";
 
 import {selectCurrentUser} from "../../redux/user/user.selector";
+import {updateAddressStart} from "../../redux/user/user.actions";
 
 import "./user-address.styles.css";
 
@@ -23,24 +24,30 @@ class UserAddressForm extends React.Component {
 
     handleSubmit = async (event) =>{
         event.preventDefault();
+
         const {houseNo, street, city, state, zipCode, country} = this.state;
-        const {currentUser} = this.props;
+        const {currentUser, updateAddressStart} = this.props;
         const address = {
             houseNo, street, city, state, zipCode, country
         }
 
-        try{
-            await updateUserAddress(currentUser, address);
-            alert("Address Updated")
-        }
-        catch(error){
-            console.error(error);
-        }
+        updateAddressStart({currentUser, address});
+        // alert("Address Updated")
+
+        // try{
+        //     await updateUserAddress(currentUser, address);
+        //     alert("Address Updated")
+        // }
+        // catch(error){
+        //     alert("Error in updating address")
+        //     console.error(error);
+        // }
     }
     handleChange = (event) => {
         const {name, value} = event.target;
         this.setState({[name]:value})
     }
+
     render()
     {
         const {currentUser} = this.props;
@@ -94,6 +101,7 @@ class UserAddressForm extends React.Component {
                             value={country}  
                             onChange={this.handleChange}
                         />
+
                     </div>
                     <div className="address-btn">
                         <CustomButton type="submit">Update Address</CustomButton>
@@ -107,4 +115,8 @@ class UserAddressForm extends React.Component {
 const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser
 })
-export default connect(mapStateToProps)(UserAddressForm);
+
+const mapDispatchToProps = dispatch => ({
+        updateAddressStart : (currentUser, address) => dispatch(updateAddressStart(currentUser, address))
+})
+export default connect(mapStateToProps, mapDispatchToProps)(UserAddressForm);

@@ -1,11 +1,12 @@
 import {takeLatest, put, all, call } from "redux-saga/effects"
 
 import UserActionTypes from "./user.types"
-import {signInSuccess, signInFailure, 
+import {updateAddressSuccess,updateAddressFailure,
+    signInSuccess, signInFailure, 
     signOutSuccess, signOutFailure,
     signUpSuccess, signUpFailure} from "./user.actions"
 
-import {auth, googleProvider, createUserProfileDocument, getCurrentUser} from "../../firebase/firebase.utils"
+import {auth, googleProvider, createUserProfileDocument, getCurrentUser, updateUserAddress} from "../../firebase/firebase.utils"
 
 
 export function* getSnapshotFromUserAuth(userAuth, additionalData){
@@ -82,6 +83,21 @@ export function* signOut(){
     }
 }
 
+export function* updateAddress({payload : {currentUser, address}}){
+    try{
+        const userRef = yield call(updateUserAddress, currentUser, address);
+        const userSnapShot = yield userRef.get();
+        yield put(updateAddressSuccess({id : userSnapShot.id, ...userSnapShot.data()}));
+        // yield call(updateUserAddress, currentUser, address);
+        // currentUser.address = address;
+        // yield put(updateAddressSuccess(currentUser))
+
+
+    }catch(error){
+        yield put(updateAddressFailure(error));
+    }
+}
+
 export function* onCheckUserSession(){
     yield takeLatest(UserActionTypes.CHECK_USER_SESSION, isUserAuthenticated)
 
@@ -100,12 +116,17 @@ export function* onSignUpSuccess(){
     yield takeLatest(UserActionTypes.SIGN_UP_SUCCESS, signInAfterSignUp)
 }
 
+export function* onUpdateAddressStart(){
+    yield takeLatest(UserActionTypes.UPDATE_ADDRESS_START, updateAddress)
+}
+
 export function* userSagas(){
     yield all([call(onGoogleSignInStart),
             call(onEmailSignInStart),
             call(onCheckUserSession),
             call(onSignOutStart),
             call(onSignUpStart),
-            call(onSignUpSuccess)
+            call(onSignUpSuccess),
+            call(onUpdateAddressStart)
     ]);
 }

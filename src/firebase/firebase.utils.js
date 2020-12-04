@@ -48,11 +48,13 @@ export const updateUserAddress = async (currentUser, addressData) => {
         address : addressData
     })
     .then(()=>{
-        console.log("Address Updated")
+        console.log("address updated")
+        // currentUser.address = addressData;
     })
     .catch(error =>{
         console.log('error updating address', error.message);
     })
+    return userRef;
 }
 
 export const addCollectionAndDocuments = async  (collectionKey, objectsToAdd) => {

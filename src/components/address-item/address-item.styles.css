@@ -13,3 +13,7 @@
 .address-item .address-input input{
     width: 100%;
 }
+.address-item .country-selector select{
+    width: 100%;
+    border: none;
+}

@@ -34,7 +34,7 @@ class Checkout extends React.Component{
                 {cartItems.map(cartItem => (
                 <CheckoutItem key={cartItem.id} cartItem={cartItem} />
                 ))}
-                <div className='total'>TOTAL: ${total}</div>
+                <div className='total'>TOTAL: Rs. {total}</div>
                 <div className = "test-warning">
                     <span className="message">*Please use the following test credit card for payments*</span>
                     <span className="message">Credit Card Number : 4242 4242 4242 4242</span>
