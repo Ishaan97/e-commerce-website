@@ -9,7 +9,7 @@ import {stripePaymentFailure, stripePaymentSuccess} from "./payment.actions";
 export function* stripePayment(stripeData){
     try{
         yield axios({
-            url: 'http://localhost:5000/payment',
+            url: 'http://serene-depths-70449.herokuapp.com/payment',
             method: 'post',
             data: {...stripeData.payload}
         })
