@@ -31,7 +31,9 @@ class UserProfileContent extends React.Component{
         return(
             <div className="user-profile-content-container">
                 {
-                    !currentUser ? "No User. Sign In "
+                    !currentUser ? (<div className="no-user-mssg">
+                        <div>No User. Sign In</div>
+                        </div>)
                     : showUserInformation ? this.renderUserInformation()
                     : showOrderHistory ? this.renderOrderHistory() 
                     : "Nope"

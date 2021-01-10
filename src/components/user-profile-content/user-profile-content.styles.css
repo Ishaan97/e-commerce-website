@@ -3,5 +3,10 @@
     height: 100%;
     background: #a6e6e6;
     border-radius: 10px;
-    overflow-y: scroll;
+    overflow-y: auto;
+}
+
+.no-user-mssg{
+    display: flex;
+    justify-content: center;
 }
