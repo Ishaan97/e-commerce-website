@@ -5,13 +5,15 @@ import {createStructuredSelector} from "reselect";
 
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 import StripeCheckoutButton from "../../components/stripe-button/stripe-button.component";
+import CheckoutErrorMessgae from "../../components/checkout-error-message/checkout-error-message.component";
 
 import {selectCartItems, selectCartTotal} from "../../redux/cart/cart.selectors";
+import { selectCurrentUser } from "../../redux/user/user.selector"
 import "./checkout.styles.css";
 
 class Checkout extends React.Component{
     render(){
-        const {cartItems, total} = this.props;
+        const {cartItems, total, currentUser} = this.props;
         return(
             <div className='checkout-page'>
                 <div className='checkout-header'>
@@ -41,7 +43,33 @@ class Checkout extends React.Component{
                     <span className="message">Expiry Date : Any Future Date</span>
                     <span className="message">CVV : Any 3 digit Number</span>
                 </div>
-                <StripeCheckoutButton className="pay" price={total} />
+
+                {
+                    total === 0 ? (
+                        <React.Fragment>
+                            <StripeCheckoutButton className="pay" price={total} isDisabled={true}/>
+                            <CheckoutErrorMessgae message={"Add some items into the cart !!!"} /> 
+                        </React.Fragment>
+                    ) :(
+                        currentUser ? (
+                            currentUser.address ? (
+                                <React.Fragment>
+                                    <StripeCheckoutButton className="pay" price={total} isDisabled={false}/>
+                                </React.Fragment>
+                            ) : (
+                                <React.Fragment>
+                                <StripeCheckoutButton className="pay" price={total} isDisabled={true}/>
+                                <CheckoutErrorMessgae message={"Add address in your profile"} /> 
+                            </React.Fragment>
+                            )
+                        ) : (
+                            <React.Fragment>
+                                <StripeCheckoutButton className="pay" price={total} isDisabled={true}/>
+                                <CheckoutErrorMessgae message={"Sign In"} /> 
+                            </React.Fragment>
+                        )
+                    )
+                }                
             </div>
                         
         );
@@ -50,7 +78,8 @@ class Checkout extends React.Component{
 
 const mapStateToProps = createStructuredSelector({
     cartItems: selectCartItems,
-    total: selectCartTotal
+    total: selectCartTotal,
+    currentUser : selectCurrentUser
 })
 
 export default connect(mapStateToProps)(Checkout);

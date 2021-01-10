@@ -15,7 +15,7 @@ class UserInformation extends React.Component {
         const {currentUser} = this.props;
         return(
             <div className="user-information">
-                <span className="heading">
+                <span className="info-heading">
                     Your Information
                 </span>
                 <div className="user-details">

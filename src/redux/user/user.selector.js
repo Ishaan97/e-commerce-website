@@ -7,6 +7,11 @@ export const selectCurrentUser = createSelector(
     (user) => user.currentUser
 )
 
+export const selectOrderHistory = createSelector(
+    [selectCurrentUser],
+    (currentUser) => currentUser.orderHistory
+)
+
 export const selectUserDropdownHidden = createSelector(
     [selectUser],
     (user) => user.hidden
@@ -15,11 +20,6 @@ export const selectUserDropdownHidden = createSelector(
 export const selectShowUserInformation = createSelector(
     [selectUser],
     (user) => user.showUserInformtion
-)
-
-export const selectShowResetPassword = createSelector(
-    [selectUser],
-    (user) => user.showResetPassword
 )
 
 export const selectShowOrderHistory = createSelector(

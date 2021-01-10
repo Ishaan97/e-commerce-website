@@ -41,7 +41,19 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     return userRef;
 }
 
-export const updateUserAddress = async (currentUser, addressData) => {
+export const addCartItemsToOrderDetails = async (currentUser, cartItems) => {
+    const userRef = firestore.doc(`users/${currentUser.id}`);
+    let data = cartItems.map(item => ({item, date : new Date().toUTCString()}));
+
+    await userRef.update({
+        orderHistory : firebase.firestore.FieldValue.arrayUnion(...data)
+    })
+
+    return userRef;
+}
+
+
+export const updateUserAddress = (currentUser, addressData) => {
     const userRef = firestore.doc(`users/${currentUser.id}`)
 
     userRef.update({

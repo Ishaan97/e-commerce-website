@@ -1,0 +1,8 @@
+.order-history-container{
+    height: 100%;
+}
+
+.order-history-item-container{
+    background: rgba(6, 95, 124, 0.6);
+    margin-bottom: 10px;
+}

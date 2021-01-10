@@ -1,0 +1,23 @@
+.order-item{
+    color: white;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.order-item .order-image{
+    width: 100px;
+    height: 100px;
+}
+
+.order-item .order-item-info{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 5px 0px 0px 10px ;
+}
+
+.item-name{
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline;
+}

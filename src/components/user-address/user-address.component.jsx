@@ -2,8 +2,6 @@ import React from 'react';
 import {connect} from "react-redux";
 import {createStructuredSelector} from "reselect";
 
-import {updateUserAddress} from "../../firebase/firebase.utils"
-
 import AddressItem from "../address-item/address-item.component";
 import CustomButton from "../custom-button/custom-button.component";
 

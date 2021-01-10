@@ -53,10 +53,6 @@ export const showUserInformation = () => ({
     type: UserActionTypes.SHOW_USER_INFORMATION
 })
 
-export const showResetPassword = () => ({
-    type: UserActionTypes.SHOW_RESET_PASSWORD
-})
-
 export const showOrderHistory = () => ({
     type: UserActionTypes.SHOW_ORDER_HISTORY
 })
@@ -89,4 +85,9 @@ export const updateAddressSuccess= (currentUser)=>({
 export const updateAddressFailure = (error) => ({
     type : UserActionTypes.UPDATE_ADDRESS_FAILURE,
     payload : error
+})
+
+export const getOrderHistory = (currentUser)=>({
+    type : UserActionTypes.GET_ORDER_HISTORY,
+    payload : currentUser
 })

@@ -1,4 +1,4 @@
-
+/* @import "~bootstrap/dist/css/bootstrap.min.css"; */
 .wrapper-content{
     min-height: calc(100vh - 165px);
 }

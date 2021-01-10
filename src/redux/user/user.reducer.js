@@ -12,6 +12,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
     switch(action.type){
         case UserActionTypes.SIGN_IN_SUCCESS:
         case UserActionTypes.UPDATE_ADDRESS_SUCCESS:
+        case UserActionTypes.GET_ORDER_HISTORY :
             return {
                 ...state,
                 currentUser: action.payload,
@@ -47,14 +48,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
                 showUserInformtion:true,
                 showResetPassword:false,
                 showOrderHistory:false
-            } 
-        case UserActionTypes.SHOW_RESET_PASSWORD : 
-            return{
-                ...state,
-                showUserInformtion:false,
-                showResetPassword:true,
-                showOrderHistory:false
-            } 
+            }  
         case UserActionTypes.SHOW_ORDER_HISTORY : 
             return{
                 ...state,
