@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/e-commerce-website-frontend/static/css/main.d508d639.chunk.css",
+    "main.js": "/e-commerce-website-frontend/static/js/main.69fc99ae.chunk.js",
+    "main.js.map": "/e-commerce-website-frontend/static/js/main.69fc99ae.chunk.js.map",
+    "runtime-main.js": "/e-commerce-website-frontend/static/js/runtime-main.98e99ee4.js",
+    "runtime-main.js.map": "/e-commerce-website-frontend/static/js/runtime-main.98e99ee4.js.map",
+    "static/js/2.87674eb6.chunk.js": "/e-commerce-website-frontend/static/js/2.87674eb6.chunk.js",
+    "static/js/2.87674eb6.chunk.js.map": "/e-commerce-website-frontend/static/js/2.87674eb6.chunk.js.map",
+    "index.html": "/e-commerce-website-frontend/index.html",
+    "precache-manifest.40d55b73efd833db9676308011ae0325.js": "/e-commerce-website-frontend/precache-manifest.40d55b73efd833db9676308011ae0325.js",
+    "service-worker.js": "/e-commerce-website-frontend/service-worker.js",
+    "static/css/main.d508d639.chunk.css.map": "/e-commerce-website-frontend/static/css/main.d508d639.chunk.css.map",
+    "static/js/2.87674eb6.chunk.js.LICENSE.txt": "/e-commerce-website-frontend/static/js/2.87674eb6.chunk.js.LICENSE.txt",
+    "static/media/iSkull-logo-black.png": "/e-commerce-website-frontend/static/media/iSkull-logo-black.f7dd71b5.png",
+    "static/media/iSkull-logo.png": "/e-commerce-website-frontend/static/media/iSkull-logo.ad8f33fc.png",
+    "static/media/shopping-cart.67ba9c13.svg": "/e-commerce-website-frontend/static/media/shopping-cart.67ba9c13.svg",
+    "static/media/user.98153c40.svg": "/e-commerce-website-frontend/static/media/user.98153c40.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.98e99ee4.js",
+    "static/js/2.87674eb6.chunk.js",
+    "static/css/main.d508d639.chunk.css",
+    "static/js/main.69fc99ae.chunk.js"
+  ]
+}
