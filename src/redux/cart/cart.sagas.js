@@ -27,6 +27,8 @@ export function* checkout(){
 
     yield put(getOrderHistory({id : userSnapshot.id, ...userSnapshot.data()}));
     yield clearCartOnSignOutOrCheckout()
+
+    alert("Order History has been updated")
 }
 
 export function* onSignOutSuccess(){
