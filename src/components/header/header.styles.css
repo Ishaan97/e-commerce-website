@@ -1,5 +1,5 @@
 .header{
-    height:100px;
+    height:15vhpx;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -18,7 +18,101 @@
 .header .logo .logo-text{
     font-size: 1.5em;
 }
-.header .options{
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+}
+
+.nav-links li{
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    color:black;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.nav-burger{
+    display: none;
+    align-self: center;
+}
+
+.nav-burger div{
+    cursor: pointer;
+    width: 20px;
+    height: 3px;
+    background-color : black;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        justify-content: space-around;
+    }
+    .nav-links{
+        border: none;
+        position: absolute;
+        right: 0px;
+        height: 86vh;
+        top: 14vh;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 10;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.burger-toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px)
+}
+
+.burger-toggle .line2{
+    opacity: 0;
+}
+
+.burger-toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px)
+}
+
+/* .header .options{
     width: 50%;
     height: 100%;
     display: flex;
@@ -28,4 +122,4 @@
 .options .option{
     padding: 10px 15px;
     cursor: pointer;
-}
+} */
