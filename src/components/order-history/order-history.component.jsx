@@ -11,10 +11,14 @@ import "./order-history.styles.css"
 class OrderHistory extends React.Component{
     render(){
         const {orderHistory} = this.props;
-        orderHistory.reverse();
+
+        if(orderHistory){
+            orderHistory.reverse()
+        }
         return(
         <div className="order-history-container">
             {
+                !orderHistory? "No Orders" :
                 orderHistory.map((order, i) => {
                     return(
                     <div className="order-history-item-container" key={i}>
