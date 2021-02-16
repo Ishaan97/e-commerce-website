@@ -8,11 +8,11 @@ import createSagaMiddleware from "redux-saga"
 import rootReducer from "./root-reducer";
 import rootSaga from "./root-saga";
 
-//! Commenting the middlewares so that they dont execute in
+//! Commenting the logger middlewares so that they dont execute in
 //! Production Env.
 
 const sagaMiddleware = createSagaMiddleware();
-const middlewares = [sagaMiddleware]; //[logger, sagaMiddleware];
+const middlewares = [logger, sagaMiddleware]; //[sagaMiddleware];
 
 export const store = createStore(rootReducer, applyMiddleware(...middlewares));
 

@@ -1,16 +1,36 @@
 .collection-page{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .collection-page .title{
     font-size: 38px;
-    margin: 0 auto 30px;
+    margin: 0 auto 30px auto;
 }
-.collection-page .items{
+.collection-page .items-container{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+.collection-page .items-container .items{
+    width: 95%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    grid-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
 }
 .collection-page .items .collection-item{
     margin-bottom: 30px;
+    
+}
+
+@media screen and (max-width:768px){
+    .collection-page .items-container .items{
+        grid-template-columns: 1fr;
+    }
+
+    .collection-page .items-container .items{
+        width:unset;
+    }
 }

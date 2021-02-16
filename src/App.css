@@ -1,4 +1,7 @@
 /* @import "~bootstrap/dist/css/bootstrap.min.css"; */
+*{
+    box-sizing: border-box;
+}
 .wrapper-content{
     min-height: calc(100vh - 165px);
 }

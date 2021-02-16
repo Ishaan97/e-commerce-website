@@ -48,7 +48,12 @@ class Header extends React.Component{
                     </Link>
 
                     <div className="nav-links">
-                        <Link to="/shop" onClick={this.navSlide}><li>SHOP</li></Link>
+                    <Link to="/" onClick={this.navSlide}>
+                            <li>HOME</li>
+                        </Link>
+                        <Link to="/shop" onClick={this.navSlide}>
+                            <li>SHOP</li>
+                        </Link>
                         {
                             currentUser? (
                                 <li>

@@ -41,15 +41,38 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     return userRef;
 }
 
-export const addCartItemsToOrderDetails = async (currentUser, cartItems) => {
-    const userRef = firestore.doc(`users/${currentUser.id}`);
+export const getCartDataFromCartItems = (cartItems)=>{
     let data = cartItems.map(item => ({item, date : new Date().toUTCString()}));
+    return data;
+}
 
+
+export const addCartItemsToOrderDetails = async (currentUser, cartItems) => {
+    
+    const userRef = firestore.doc(`users/${currentUser.id}`);
+    let data = getCartDataFromCartItems(cartItems);
     await userRef.update({
         orderHistory : firebase.firestore.FieldValue.arrayUnion(...data)
-    })
+    });
 
+    deleteCartItems(currentUser);
     return userRef;
+}
+
+export const addCartItemsToCartDetails = async (currentUser, cartItems) => {
+    const userRef = firestore.doc(`users/${currentUser.id}`);
+    let data = getCartDataFromCartItems(cartItems);
+    await userRef.update({
+        cartItems : data
+    });
+    return userRef;
+}
+
+export const deleteCartItems = async(currentUser) => {
+    const userRef = firestore.doc(`users/${currentUser.id}`);
+    await userRef.update({
+        cartItems : firebase.firestore.FieldValue.delete()
+    })
 }
 
 

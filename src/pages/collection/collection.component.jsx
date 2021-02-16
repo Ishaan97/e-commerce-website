@@ -11,16 +11,18 @@ class CollectionPage extends React.Component {
     render()
     {
         const {collection} = this.props;
-        console.log(collection)
         const {title, items} = collection
         return (
             <div className="collection-page">
                 <h2 className="title">{title}</h2>
-                <div className="items">
-                    {
-                        items.map(item => <CollectionItem key={item.id} item={item}/>)
-                    }
+                <div className="items-container">
+                    <div className="items">
+                        {
+                            items.map(item => <CollectionItem key={item.id} item={item}/>)
+                        }
+                    </div>
                 </div>
+                
             </div>
             
         );

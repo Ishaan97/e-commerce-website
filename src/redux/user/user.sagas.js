@@ -1,12 +1,15 @@
-import {takeLatest, put, all, call } from "redux-saga/effects"
+import {takeLatest, put, all, call, select } from "redux-saga/effects"
 
 import UserActionTypes from "./user.types"
 import {updateAddressSuccess,updateAddressFailure,
     signInSuccess, signInFailure, 
     signOutSuccess, signOutFailure,
-    signUpSuccess, signUpFailure} from "./user.actions"
+    signUpSuccess, signUpFailure} from "./user.actions";
 
-import {auth, googleProvider, createUserProfileDocument, getCurrentUser, updateUserAddress} from "../../firebase/firebase.utils"
+import {selectCartItems} from "../cart/cart.selectors";
+import {selectCurrentUser} from"./user.selector";
+
+import {auth, googleProvider, createUserProfileDocument, getCurrentUser, updateUserAddress, addCartItemsToCartDetails} from "../../firebase/firebase.utils"
 
 
 export function* getSnapshotFromUserAuth(userAuth, additionalData){
@@ -75,7 +78,17 @@ export function* signInAfterSignUp({payload : {user, additionalData}})
 }
 export function* signOut(){
     try{
+        const cart = yield select(selectCartItems);
+        const currentUser = yield select(selectCurrentUser);
+
         yield auth.signOut();
+
+        //* Adds cart items to the database
+        if(cart.length !== 0){
+            yield call(addCartItemsToCartDetails, currentUser, cart);
+        }
+        
+
         yield put(signOutSuccess())
     }catch(error)
     {
